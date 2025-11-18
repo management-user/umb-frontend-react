@@ -1,0 +1,104 @@
+/* Estilos Globales y Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado y Pie de Página (Semántico) */
+header {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 4px solid #50b3a2;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos de Sección y Contenedores */
+.contenedor-principal {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    /* Usando padding para dar espacio interno a la sección */
+    padding: 20px; 
+    background: white;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Restablecer alineación */
+}
+
+.section-title {
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* 🧱 Uso de Flexbox y align-items para centrar 🧱 */
+.tarjeta-flex {
+    /* 1. Activar Flexbox */
+    display: flex;
+    /* 2. Centrar horizontalmente */
+    justify-content: center; 
+    /* 3. Centrar verticalmente (solo relevante si tiene altura) */
+    align-items: center; 
+    
+    height: 100px; /* Altura de ejemplo */
+    background: #e6e6e6;
+    border: 1px dashed #50b3a2;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    /* padding interno */
+    padding: 10px; 
+}
+
+.tarjeta-flex p {
+    margin: 0;
+    font-weight: bold;
+    color: #50b3a2;
+    text-align: center;
+}
+
+.info-section {
+    background-color: #f0fff0;
+    border: 1px solid #c9e4c9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Botones JS */
+.btn {
+    background-color: #50b3a2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #3a8a79;
+}
