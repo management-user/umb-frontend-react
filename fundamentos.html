@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Web y JS Básico</title>
+    
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Fundamentos de Desarrollo Web</h1>
+    </header>
+
+    <main>
+        <section class="contenedor-principal">
+            <h2 class="section-title">HTML Semántico y Flexbox</h2>
+            <div class="tarjeta-flex">
+                <p>Esta tarjeta demuestra el uso de **Flexbox** para centrar el contenido y mantener el diseño adaptable (responsive).</p>
+            </div>
+            
+            <div class="info-section">
+                <p>El uso del `meta viewport` y Flexbox asegura que el diseño se **adapte** correctamente a diferentes tamaños de pantalla.</p>
+            </div>
+        </section>
+
+        <section class="contenedor-principal">
+            <h2 class="section-title">JavaScript Básico (Ver Consola)</h2>
+            <p>Abre la Consola de Desarrollador (F12) para ver la ejecución de las funciones `switch` y `for loop` con `continue`.</p>
+            
+            <button id="ejecutarSwitch" class="btn">Ejecutar Switch (Prioridad)</button>
+            <button id="ejecutarLoop" class="btn">Ejecutar Loop (Sumar)</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fundamentos Web UMB. Usando &lt;section&gt; y &lt;footer&gt;.</p>
+    </footer>
+
+    <script>
+        
+        // Función 1: Usando Switch (ej: switch(prioridad))
+        function clasificarPrioridad(prioridad) {
+            console.log(`\n--- Ejecutando Función Switch ---`);
+            switch (prioridad) {
+                case 'alta':
+                    console.log("¡ALARMA! Tarea de Prioridad ALTA. Debe resolverse de inmediato.");
+                    break;
+                case 'media':
+                    console.log("Tarea de Prioridad MEDIA. Programar para esta semana.");
+                    break;
+                case 'baja':
+                    console.log("Tarea de Prioridad BAJA. Puede posponerse o delegarse.");
+                    break;
+                default:
+                    console.log("Prioridad no reconocida. Asignada como BAJA por defecto.");
+            }
+        }
+
+        // Función 2: Usando for loop con continue (ej: sumar números saltando el 5)
+        function sumarNumerosSaltando(numeroASaltar) {
+            console.log(`\n--- Ejecutando Loop con Continue (Saltando el ${numeroASaltar}) ---`);
+            let sumaTotal = 0;
+            const limite = 10;
+            
+            for (let i = 1; i <= limite; i++) {
+                // Si el número actual es igual al número a saltar, 
+                // la palabra clave 'continue' omite el resto del ciclo y pasa a la siguiente iteración.
+                if (i === numeroASaltar) {
+                    console.log(`(Salto: Omitiendo el número ${i})`);
+                    continue; 
+                }
+                
+                sumaTotal += i;
+                console.log(`Sumando: ${i}. Suma actual: ${sumaTotal}`);
+            }
+            
+            console.log(`Resultado final de la suma (excluyendo el ${numeroASaltar}): ${sumaTotal}`);
+        }
+        
+        // Asignar funciones a los botones
+        document.getElementById('ejecutarSwitch').addEventListener('click', () => {
+            clasificarPrioridad('alta');
+        });
+        
+        document.getElementById('ejecutarLoop').addEventListener('click', () => {
+            sumarNumerosSaltando(5);
+        });
+
+    </script>
+</body>
+</html>
